@@ -41,8 +41,9 @@ HEAD`. With `git-get` you don't have to remember that nonsense: you
 use `git get current-branch-name`.  To check if the repository is
 dirty, you use `git get is-working-tree-dirty` and it exits
 successfully if so, and unsuccessfully if not. It is easy to drop in
-new subcommands. `git get` with no argument prints a list of available
-information.
+new subcommands; every time I find out there is no easy way to
+determine some bit of git information, I drop it in here. `git get`
+with no argument prints a list of available information.
 
 `git-re-edit` invokes the editor on all the currently-dirty files:
 
@@ -53,7 +54,7 @@ case. You invoke "git re-edit" and it runs the editor on the dirty
 files.
 2. After `git reset HEAD^`, use `git re-edit` to invoke the editor on the files that were changed in the last commit.
 3. During an interactive rebase that results in a complicated merge, you would like to run the editor on the conflicted files to resolve the conflicts. `git re-edit` will do that.
-4. You or a coworker refactors some code.  Later, you'd like to refactor the same code some more.  Use `git re-edit `*commit* to edit the files that were changed in that commit.
+4. You or a coworker refactors some code.  Later, you'd like to refactor the same code some more.  Use `git re-edit` *commit* to edit the files that were changed in that commit.
 
 `git-todays-commits` is supposed to list the commits that I made today.
 
